@@ -1,14 +1,10 @@
-=======================
-How to Use 1-my_list.py
-=======================
+======================
+1-my_list.py
+======================
 
-This module defines a class ``MyList`` that inherits from ``list``.
+Module defined as MyList that inherits from list
 
-Instantiation
-=============
-
-``MyList`` can be instantiated with no arguments, which will return
-an empty list:
+=====================
 
 ::
 
@@ -22,7 +18,18 @@ an empty list:
     >>> print(my_list)
     []
 
-Or a single argument, which must be an iterable object.
+::
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+It works when using type()
 
 ::
 
@@ -30,59 +37,40 @@ Or a single argument, which must be an iterable object.
     >>> print(my_list)
     [1, 2, 3]
 
-::
-
-    >>> my_list = MyList(None)
-    Traceback (most recent call last):
-    TypeError: 'NoneType' object is not iterable
-
-
-A ``TypeError`` will be raised for any more than one instantiation arguments.
-
-::
-
-    >>> my_list = MyList([1, 2], [3, 4])
-    Traceback (most recent call last):
-    TypeError: list() takes at most 1 argument (2 given)
-
-Usage
-=====
-
-``MyList`` is an inherited ``list`` class, and thus features the same methods.
-For instance, elements can be added to a ``MyList`` with the ``append()`` method.
+TypeError when None argument is in the list
 
 ::
 
     >>> my_list = MyList()
     >>> my_list.append(1)
+    >>> my_list.append(4)
     >>> my_list.append(2)
     >>> my_list.append(3)
+    >>> my_list.append(5)
     >>> print(my_list)
-    [1, 2, 3]
+    [1, 4, 2, 3, 5]
 
-Replaced with indexing:
+It works when adding eleemtne in a given index
 
 ::
 
-    >>> my_list[0] = 5
+    >>> my_list[1] = 6
     >>> print(my_list)
-    [5, 2, 3]
+    [1, 6, 2, 3, 5]
 
-And removed with the ``remove()`` method.
+It works when removing a element using remove function
 
 ::
 
-    >>> my_list.remove(5)
+    >>> my_list.remove(6)
     >>> print(my_list)
-    [2, 3]
+    [1, 2, 3, 5]
 
-See the documentation on Python lists for more built-in methods.
+====================
 
-``print_sorted`` Method
-=======================
+Public instance method defined as print_sorted
 
-``MyList`` implements a single method - a public instance method
-``print_sorted(self)``.
+=====================
 
 ::
 
@@ -90,20 +78,11 @@ See the documentation on Python lists for more built-in methods.
     >>> print(my_list.print_sorted)
     <bound method MyList.print_sorted of []>
 
-The method takes no arguments - a TypeError will be raised if an argument is
-provided.
+It works when appending a list
 
 ::
 
-    >>> my_list.print_sorted(1)
-    Traceback (most recent call last):
-    TypeError: print_sorted() takes 1 positional argument but 2 were given
-
-The method prints the list in ascending sorted order.
-
-::
-
-    >>> my_list.append(1)
+ >>> my_list.append(1)
     >>> my_list.append(4)
     >>> my_list.append(2)
     >>> my_list.append(3)
@@ -113,42 +92,32 @@ The method prints the list in ascending sorted order.
 
 ::
 
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
+    >>> my_list.print_sorted
+    <bound method MyList.print_sorted of [1, 4, 2, 3, 5]>
 
-The order of the original list is not altered after a call to the method.
+TypeError print_sorted when method is given 1 argument
 
 ::
 
-    >>> print(my_list)
-    [1, 4, 2, 3, 5]
-
-Note that lists of strings are sorted lexographically.
+    >>> my_list.print_sorted(1)
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 ::
 
     >>> my_list = MyList()
-    >>> my_list.append("Brennan")
-    >>> my_list.append("Poppy")
-    >>> my_list.append("School")
-    >>> my_list.append("Holberton")
-    >>> my_list.append("Betty")
+    >>> my_list.append("Edward")
+    >>> my_list.append("Ortiz")
+    >>> my_list.append("Jhon")
+    >>> my_list.append("Doe")
+    >>> my_list.append("Mr Puffles")
     >>> print(my_list)
-    ['Brennan', 'Poppy', 'School', 'Holberton', 'Betty']
+    ['Edward', 'Ortiz', 'Jhon', 'Doe', 'Mr Puffles']
 
 ::
 
     >>> my_list.print_sorted()
-    ['Betty', 'Brennan', 'Holberton', 'Poppy', 'School']
-
-Another friendly reminder that the original list is unaltered :)
-
-::
-
-    >>> print(my_list)
-    ['Brennan', 'Poppy', 'School', 'Holberton', 'Betty']
-
-Nothing to sort with empty lists.
+    ['Doe', 'Edward', 'Jhon', 'Mr Puffles', 'Ortiz']
 
 ::
 
@@ -156,13 +125,9 @@ Nothing to sort with empty lists.
     >>> my_list.print_sorted()
     []
 
-If ``print_sorted(...)`` is called on a list of different types, a TypeError
-will be raised.
-
 ::
 
-    >>> my_list = MyList([1, "Betty", "Holberton", 5])
+    >>> my_list = MyList([3, "Edward", "Ortiz", 2])
     >>> my_list.print_sorted()
     Traceback (most recent call last):
-    TypeError: unorderable types: str() < int()
-    
+    TypeError: '<' not supported between instances of 'str' and 'int'
