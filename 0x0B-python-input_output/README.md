@@ -6,36 +6,17 @@ This project has used the builtin with, open, and read functions with the json m
 
 0. Function that reads a text file (UTF8) and prints it to stdout
 
-1. Function that returns the number of lines of a text file
-
-2. Function that reads n lines of a text file (UTF8) and prints it to stdout
-
-3. Function that writes a string to a text file (UTF8) and returns the number of characters written
-
-4. Function that appends a string at the end of a text file (UTF8) and returns the number of characters added
-
-5. Function that returns the JSON representation of an object (string)
-
-6. Function that returns an object (Python data structure) represented by a JSON string
-
-7. Function that writes an Object to a text file, using a JSON representation
-
-8. Function that creates an Object from a “JSON file”
-
-9. Script that adds all arguments to a Python list, and then save them to a file
-
-10. Function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object
-
-11. Class Student that defines a student
-
-12. Class Student that defines a student by: (based on 11-student.py)
-
-13. Class Student that defines a student by: (based on 12-student.py)
-
-14. Function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n
-
-15. Function that inserts a line of text to a file, after each line containing a specific string
-
-16. Script that reads stdin line by line and computes metrics (Task in progress)
-
-17. Script that finds a string in the heap of a running process, and replaces it
+1. Function that writes a string to a text file (UTF8) and returns the number of characters written:
+2. Function that appends a string at the end of a text file (UTF8) and returns the number of characters added
+3. Function that returns the JSON representation of an object (string)
+4. Function that returns an object (Python data structure) represented by a JSON string
+5. Function that writes an Object to a text file, using a JSON representation
+6. A function that creates an Object from a “JSON file”
+7. A script that adds all arguments to a Python list, and then save them to a file
+8. A function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object
+9. A class Student that defines a student public instance attributes
+10. A class Student that defines a student by: (based on 9-student.py)
+11. A class Student that defines a student by: (based on 10-student.py)
+12. Create a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n
+13. A  function that inserts a line of text to a file, after each line containing a specific string
+14. A script that reads stdin line by line and computes metrics
