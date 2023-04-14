@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Prevent SQL Injection """
 
 import sys
 import MySQLdb
