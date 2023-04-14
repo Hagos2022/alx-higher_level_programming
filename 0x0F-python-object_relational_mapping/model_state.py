@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """ Inherits from SQLAlchemy Base and links to the MySQL table states.
 """
 
