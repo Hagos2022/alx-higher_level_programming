@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """ A script that prints the State object with the name passed
 as argument from the database
 """
