@@ -3,8 +3,7 @@
 This project covers network implementations using Python.
 This involves how to use `urllib` and `requests` Python
 libraries to send and receive HTTP messages to URLs.Tasks include sending `GET`
-and `POST` requests, fetching JSON resources, and interacting with API's (the
-Star Wars API, GitHub API, and Twitter API).
+and `POST` requests, fetching JSON resources, and interacting with GitHub API.
 
 ## Tasks :heavy_check_mark:
 
@@ -19,4 +18,3 @@ Star Wars API, GitHub API, and Twitter API).
 8. Script that takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter.
 9. Script that takes your Github credentials (username and password) and uses the Github API to display your id
 10. Script that takes 2 arguments in order to solve this challenge.
-11. Script that takes in 3 strings and sends a search request to the Twitter API
